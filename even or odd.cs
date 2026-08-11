@@ -1,15 +1,11 @@
-﻿Console.WriteLine("Enter the number : ");
-int num1 = int.Parse(Console.ReadLine());
+Console.Write("Enter a number: ");
+int num = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Enter the number : ");
-int num2 = int.Parse(Console.ReadLine());
-
-if (num1 > num2)
+if (num % 2 == 0)
 {
-    Console.WriteLine($"num1 = {num1}");
+    Console.WriteLine("Even");
 }
-else if (num1 < num2)
+else
 {
-    Console.WriteLine($"num2 = {num2}");
+    Console.WriteLine("Odd");
 }
-else Console.WriteLine("num1 = num2");
