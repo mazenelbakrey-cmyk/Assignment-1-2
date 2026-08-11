@@ -1,40 +1,31 @@
-﻿Console.WriteLine("enter the number 1 : ");
-if(Console.ReadLine() != null)
-{
-    int num1 = int.Parse(Console.ReadLine());
-}
-else
-{
-    Console.WriteLine("enter a valid number ");
-}
+Console.WriteLine("Enter number 1:");
+int num1 = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter the operator : ");
+Console.WriteLine("Enter the operator:");
 string op = Console.ReadLine();
 
-Console.WriteLine("enter the number 2 : ");
-if (Console.ReadLine() != null)
-{
-    int num2 = int.Parse(Console.ReadLine());
-}
-else
-{
-    Console.WriteLine("enter a valid number ");
-}
-;
+Console.WriteLine("Enter number 2:");
+int num2 = int.Parse(Console.ReadLine());
 
-if (op == "+")
+switch (op)
 {
-    Console.WriteLine($" {num1} + {num2} = {num1+num2}");
-}
-else  if (op == "-")
-{
-    Console.WriteLine($" {num1} - {num2} = {num1 - num2}");
-}
-else if(op == "*")
-{
-    Console.WriteLine($" {num1} * {num2} = {num1 * num2}");
-}
-else if (op == "/")
-{
-    Console.WriteLine($" {num1} / {num2} = {num1 / num2}");
+    case "+":
+        Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+        break;
+
+    case "-":
+        Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+        break;
+
+    case "*":
+        Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+        break;
+
+    case "/":
+        Console.WriteLine($"{num1} / {num2} = {num1 / num2}");
+        break;
+
+    default:
+        Console.WriteLine("Invalid operator");
+        break;
 }
